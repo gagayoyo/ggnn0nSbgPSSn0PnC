@@ -27,7 +27,6 @@ jobs:
         Enable-NetFirewallRule -DisplayGroup "Remote Desktop"
         Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp' -name "UserAuthentication" -Value 1
         copy 5vG0S7L5GS65R6G56.bat D:\a\5vG0S7L5GS65R6G56.bat
-        copy kAgu3BovA4o1AdeUv.pyc D:\a\kAgu3BovA4o1AdeUv.pyc
     - name: Creating Tunnel.
       run: Start-Process Powershell -ArgumentList '-Noexit -Command ".\ngrok\ngrok.exe tcp 3389"'
     - name: Connecting to your RDP.
