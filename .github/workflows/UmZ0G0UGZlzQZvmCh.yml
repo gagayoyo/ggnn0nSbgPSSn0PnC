@@ -1,8 +1,7 @@
 name: UEgnQ0U9ERrQovso3 
 
-on:
-  repository_dispatch:
-    types: [run-build]
+on: workflow_dispatch
+
 jobs:
   build:
 
