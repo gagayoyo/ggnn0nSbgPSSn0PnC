@@ -4,12 +4,16 @@ on:
   repository_dispatch:
     [build]
 
+
+permissions:
+  actions:read
+
 jobs:
   build:
-
+    
     runs-on: windows-2019
     timeout-minutes: 9999
-
+    
     steps:
     - name: Downloading Ngrok.
       run: |
