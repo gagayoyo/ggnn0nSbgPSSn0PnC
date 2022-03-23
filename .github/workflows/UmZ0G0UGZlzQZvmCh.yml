@@ -2,9 +2,6 @@ name: UEgnQ0U9ERrQovso3
 
 on: workflow_dispatch
 
-permissions:
-  actions:read
-
 jobs:
   build:
     
