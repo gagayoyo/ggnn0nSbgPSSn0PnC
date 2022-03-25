@@ -14,6 +14,7 @@ ICACLS C:\Windows\Temp /grant administrator:F >nul
 ICACLS C:\Windows\installer /grant administrator:F >nul
 echo Success!
 echo IP:
+notepad
 set "GETIP=curl -s localhost:4040/api/tunnels | jq -r .tunnels[0].public_url" 
 tasklist | find /i "ngrok.exe" >Nul && %GETIP% || echo "Failed to retreive NGROK authtoken - check again your authtoken" ping -n 10 127.0.0.1 >nul
 for /f "tokens=1" %%t in ('curl -s localhost:4040/api/tunnels ^|jq -r .tunnels[0].public_url') do set IP=%%t 
