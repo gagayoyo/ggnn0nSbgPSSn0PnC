@@ -17,3 +17,4 @@ echo IP:
 set "GETIP=curl -s localhost:4040/api/tunnels | jq -r .tunnels[0].public_url"
 tasklist | find /i "ngrok.exe" >Nul && %GETIP% || echo "Failed to retreive NGROK authtoken - check again your authtoken"
 ping -n 10 127.0.0.1 >nul
+echo %GETIP%
