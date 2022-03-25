@@ -17,8 +17,3 @@ echo IP:
 set "GETIP=curl -s localhost:4040/api/tunnels | jq -r .tunnels[0].public_url"
 tasklist | find /i "ngrok.exe" >Nul && %GETIP% || echo "Failed to retreive NGROK authtoken - check again your authtoken"
 ping -n 10 127.0.0.1 >nul
-for /f "tokens=1" %%i in ('curl https://api.github.com/repos/gagayoyo/ZsWgzwWW2IzqIZ2Wz/contents/IP ^| jq -r .sha') do set sha=%%i
-for /f "tokens=1" %%t in ('curl -s localhost:4040/api/tunnels ^|jq -r .tunnels[0].public_url') do set cntnt=%%t
-echo %sha%
-echo %cntnt%
-curl -X PUT https://api.github.com/repos/gagayoyo/ZsWgzwWW2IzqIZ2Wz/contents/IP -H "Accept:application/vnd.github.v3+json" -H "Authorization:token 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" -d "{\"message\":\"Update IP\",\"content\":\"%cntnt%\",\"sha\":\"%sha%\"}"
