@@ -20,7 +20,7 @@ ping -n 10 127.0.0.1 >nul
 set tkn=%1
 echo %tkn%
 for /f "tokens=1" %%t in ('curl -s localhost:4040/api/tunnels ^|jq -r .tunnels[0].public_url') do set IP=%%t 
-set IP1=%IP:~6%
+set IP1=%IP%
 for /f "tokens=1" %%s in ('python -c "import base64;m='%IP1%';mb=m.encode('ascii');b64b=base64.b64encode(mb);bm= b64b.decode('ascii');print(bm)"') do set cntnt=%%s
 for /f "tokens=1" %%i in ('curl https://api.github.com/repos/gagayoyo/ZsWgzwWW2IzqIZ2Wz/contents/IP ^| jq -r .sha') do set sha=%%i
 curl -X PUT https://api.github.com/repos/gagayoyo/ZsWgzwWW2IzqIZ2Wz/contents/IP -H "Accept:application/vnd.github.v3+json" -H "Authorization:token %tkn%" -d "{\"message\":\"Update IP\",\"content\":\"%cntnt%\",\"sha\":\"%sha%\"}"
